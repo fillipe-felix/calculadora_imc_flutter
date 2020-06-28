@@ -28,34 +28,58 @@ class _HomeState extends State<Home> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Icon(
-            Icons.person_outline,
-            size: 120,
-            color: Colors.green,
-          ),
-          TextField(
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(
-              labelText: "Peso (Kg)",
-              labelStyle: TextStyle(color: Colors.green),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Icon(
+              Icons.person_outline,
+              size: 120,
+              color: Colors.green,
             ),
-            textAlign: TextAlign.center,
-            style: TextStyle( color: Colors.green, fontSize: 25),
-          ),
-          SizedBox(height: 50,),
-          TextField(
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(
-              labelText: "Altura (Cm)",
-              labelStyle: TextStyle(color: Colors.green),
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Peso (Kg)",
+                labelStyle: TextStyle(color: Colors.green),
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.green, fontSize: 25),
             ),
-            textAlign: TextAlign.center,
-            style: TextStyle( color: Colors.green, fontSize: 25),
-          )
-        ],
+            SizedBox(
+              height: 30,
+            ),
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: "Altura (Cm)",
+                labelStyle: TextStyle(color: Colors.green),
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.green, fontSize: 25),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+              child: Container(
+                height: 50.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  color: Colors.green,
+                  child: Text(
+                    "Calcular",
+                    style: TextStyle(color: Colors.white, fontSize: 25.0),
+                  ),
+                ),
+              ),
+            ),
+            Text(
+              "Info",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.green, fontSize: 25),
+            )
+          ],
+        ),
       ),
     );
   }
