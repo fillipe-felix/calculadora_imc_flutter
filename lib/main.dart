@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,8 +26,11 @@ class _HomeState extends State<Home> {
   void _resetFields() {
     weightController.text = "";
     heightController.text = "";
+
     setState(() {
       _info = "Informe seus dados";
+      //reseta a mensagem de validação do form
+      _formKey = GlobalKey<FormState>();
     });
   }
 
@@ -86,7 +91,7 @@ class _HomeState extends State<Home> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: "Peso (Kg)",
-                  labelStyle: TextStyle(color: Colors.green),
+                  labelStyle: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.green, fontSize: 25),
@@ -105,7 +110,7 @@ class _HomeState extends State<Home> {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: "Altura (Cm)",
-                  labelStyle: TextStyle(color: Colors.green),
+                  labelStyle: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
                 ),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.green, fontSize: 25),
@@ -114,25 +119,29 @@ class _HomeState extends State<Home> {
                 //validador para validar os campos digitados e nao deixar nenhum campo em branco
                 validator: (value) {
                   if (value.isEmpty) {
-                    return "Insira o sua altura";
+                    return "Insira a sua altura";
                   }
                 },
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+                padding: const EdgeInsets.only(top: 25.0, bottom: 25.0),
                 child: Container(
                   height: 50.0,
                   child: RaisedButton(
+                    //Opção para deiar o botão com as bordas arredondadas
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                    highlightColor: Colors.red,
                     onPressed: () {
                       //se o formulario estiver valido ai sim ele chama a cunção para calcular
-                      if(_formKey.currentState.validate()){
+                      if (_formKey.currentState.validate()) {
                         _calculate();
-                      };
+                      }
+                      ;
                     },
                     color: Colors.green,
                     child: Text(
                       "Calcular",
-                      style: TextStyle(color: Colors.white, fontSize: 25.0),
+                      style: TextStyle(color: Colors.white, fontSize: 25.0, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
