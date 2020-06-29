@@ -1,6 +1,15 @@
 # calculadora_imc_flutter
+App desenvolvido seguindo os passos do curso de flutter.<br>
+Na primeira imagem é o resultado final apresentado pelo curso.<br>
+Na segunda imagem eu fiz algumas alterações, sendo elas, alteração da fonte de "Peso" e "Altura"<br>
+para **Bold** e mudei as bordas do botão para que ficassem redondas e quando usuario clica<br>
+a cor do botão "Calcular" muda para a cor Red. Essas forão as alterações que eu efetuei<br>
+para descobrir um pouco mais sobre a linguagem.
 
-A new Flutter project.
+
+![](https://i.imgur.com/td2lEPa.png?1)
+![](https://i.imgur.com/27NmFwz.jpg?1)
+
 
 ## Getting Started
 
