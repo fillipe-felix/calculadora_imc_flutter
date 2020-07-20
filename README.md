@@ -1,4 +1,7 @@
 # calculadora_imc_flutter
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cc9ac55bc3cc46aaab481368490507e1)](https://app.codacy.com/manual/fillipe-felix/calculadora_imc_flutter?utm_source=github.com&utm_medium=referral&utm_content=fillipe-felix/calculadora_imc_flutter&utm_campaign=Badge_Grade_Dashboard)
+
 App desenvolvido seguindo os passos do curso de flutter.<br>
 Na primeira imagem é o resultado final apresentado pelo curso.<br>
 Na segunda imagem eu fiz algumas alterações, sendo elas, alteração da fonte de "Peso" e "Altura"<br>
